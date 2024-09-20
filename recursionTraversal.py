@@ -17,8 +17,6 @@ def list_traverse(lst, depth=1, totalItems = 0):
         elif type(i) is list:
             recieved = list_traverse(i, depth+1, totalItems)
             sum += recieved[0]
-            if recieved[3] > deepest:
-                deepest = recieved[3]
             totalItems += recieved[2]+1
             calls += recieved[1] + 1
             print(recieved, i, deepest)
