@@ -22,7 +22,7 @@ The number of recursions (i.e., the number of times the recursive function calls
 The total number of items in the list, including nested lists.
 The deepest level of nesting encountered.
 Example:
-nested_list = [1, [2, 3], [[4], [5, [6, 7]]], 8] # Expected output: # (36, [total recursions], 10, 3)
+nested_list = [1, [2, 3], [[4], [5, [6, 7]]], 8] # Expected output: # (36, [total recursions], 13, 3)
 
 Requirements:
 Recursive Function: The core function must use recursion to navigate through the list of lists.
