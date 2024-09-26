@@ -10,19 +10,19 @@ def list_traverse(lst, depth=1, totalItems = 0):
     totalItems = 0
     calls = 0
     deepest= 0
+    recieved = len(lst)
     for i in lst:
         if type(i) is int:
-            totalItems += 1
             sum += i
         elif type(i) is list:
             recieved = list_traverse(i, depth+1, totalItems)
             sum += recieved[0]
-            totalItems += recieved[2]+1
+            totalItems += recieved[2]
             calls += recieved[1] + 1
             print(recieved, i, deepest)
         else:
             print(f"Expected int, got {type(i)}: {i}")
-    return (sum, calls, totalItems, deepest)
+    return (sum, calls, recieved, deepest)
 
 
 lst = [1, [2, 3], [[4], [5, [6, 7]]], 8]
