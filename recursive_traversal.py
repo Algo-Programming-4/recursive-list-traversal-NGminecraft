@@ -26,5 +26,6 @@ def list_traverse(lst, depth=-1, totalItems = 0):
     return (sum, calls, totalItems, deepest)
 
 
-lst = [1, [2, 3], [[4], [5, [6, 7, [8, 9, 10, [11, [12]]]]]], 12]
-print(list_traverse(lst))
+if __name__ == "__main__":
+    lst =[1, [2, 3], [[4], [5, [6, 7]]], 8]
+    print(list_traverse(lst))
